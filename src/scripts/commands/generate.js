@@ -1,6 +1,5 @@
 import fs from 'fs';
 import os from 'os';
-import path_exists from "path-exists";
 import {promisify} from "util";
 import {cwd, exists} from '../util';
 import chalk from 'chalk';
@@ -52,13 +51,8 @@ async function genSidebar(cwdPath, sidebarPath) {
       tree += nodeName
     }
   });
-  if(await path_exists(sidebarPath)){
-    await promisify(fs.unlink)(sidebarPath);
-    await promisify(fs.writeFile)(sidebarPath,tree);
-  }else{
-    await promisify(fs.writeFile)(sidebarPath,tree);
-  };
-}
+  await promisify(fs.writeFile)(sidebarPath,tree);
+};
 
 function getDirFiles(dir, callback) {
   fs.readdirSync(dir).forEach(function (file) {
