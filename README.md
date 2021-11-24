@@ -8,6 +8,7 @@
 npm install @cyber-tools/docsify-server --save-dev
 ```
 
+```shell
 usage: docsify-server [-h] [-v] [-s SIDEBAR] [-p DOCS_PATH]
 
 自动根据docs中的md文件生成sidebar目录,并启动文档预览服务
@@ -19,3 +20,4 @@ optional arguments:
                         sidebarname
   -p DOCS_PATH, --docs-path DOCS_PATH
                         文档源文件
+```
