@@ -4,8 +4,7 @@
   "description": "自动根据docs中的md文件生成sidebar目录,并启动文档预览服务",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir=dist",
-    "prepublishOnly": "npm run build && npm version major && git push"
+    "prepublishOnly": "npm version major && git push"
   },
   "publishConfig": {
     "access": "public"
